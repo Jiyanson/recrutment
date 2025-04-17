@@ -4,6 +4,7 @@ import './App.css';
 import { createTheme, MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
 import Homepage from './Pages/Homepage';
+import FindJobs from './Pages/FindJobs';
 
 function App() {
   const theme = createTheme({
@@ -25,8 +26,8 @@ function App() {
     <MantineProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Homepage />} />
           <Route path="*" element={<Homepage />} />
+          <Route path="/find-job" element={<FindJobs/>}/>
         </Routes>
       </BrowserRouter>
     </MantineProvider>
